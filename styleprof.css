@@ -276,29 +276,80 @@
   }
   
   /* Media Queries */
-  @media (max-width: 768px) {
-    .nav-menu {
-      flex-direction: column;
-    }
-    .nav-menu li {
-      margin: 10px 0;
-    }
-    .profile {
-      flex-direction: column;
-    }
-    .profile-pic {
-      margin-bottom: 20px;
-    }
+ /* Media Query for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  /* Stack navigation menu vertically */
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
   }
   
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: 28px;
-    }
-    .hero p {
-      font-size: 18px;
-    }
+  .nav-menu li {
+    margin: 10px 0;
   }
+  
+  /* Reduce top padding in main to accommodate smaller screens */
+  main {
+    padding: 80px 15px 15px;
+  }
+  
+  /* Adjust hero section typography */
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  /* For sections with side-by-side layout (like profile-section), stack vertically */
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-img {
+    margin: 0 auto 20px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Media Query for Small Mobile Devices */
+@media (max-width: 480px) {
+  main {
+    padding: 70px 10px 10px;
+  }
+  
+  .hero h1 {
+    font-size: 24px;
+  }
+  
+  .hero p {
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  /* Adjust skills circles size if needed */
+  .circle-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .percentage {
+    font-size: 1em;
+  }
+}
+
 /* Back to Home Button */
 .back-home {
     text-align: center;
