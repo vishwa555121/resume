@@ -4,85 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio - Home</title>
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styleprof.css" />
 </head>
 <body>
   <div class="wrapper">
+    <!-- Header -->
     <header>
-      <!-- Desktop Navigation -->
-      <nav class="desktop-nav">
+      <nav>
         <ul class="nav-menu">
           <li><a href="about.html">About Me</a></li>
           <li><a href="education.html">Education</a></li>
           <li><a href="skills.html">Skills</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="softskills.html">Soft Skills</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="softskills.html">soft skills</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="achievements.html" class="active">Achievements</a></li>
         </ul>
       </nav>
-      <!-- Hamburger Icon for Mobile -->
-      <div class="hamburger" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-      </div>
     </header>
-
-    <!-- Sidebar Navigation (hidden by default on larger screens) -->
-    <div id="sidebar" class="sidebar">
-      <div class="close-btn" onclick="toggleSidebar()">
-        <i class="fas fa-times"></i>
-      </div>
-      <ul class="sidebar-menu">
-        <li><a href="about.html" onclick="toggleSidebar()">About Me</a></li>
-        <li><a href="education.html" onclick="toggleSidebar()">Education</a></li>
-        <li><a href="skills.html" onclick="toggleSidebar()">Skills</a></li>
-        <li><a href="projects.html" onclick="toggleSidebar()">Projects</a></li>
-        <li><a href="softskills.html" onclick="toggleSidebar()">Soft Skills</a></li>
-        <li><a href="contact.html" onclick="toggleSidebar()">Contact</a></li>
-         <li><a href="achievements.html" onclick="toggleSidebar()">Contact</a></li>
-      </ul>
-    </div>
 
     <!-- Main Content -->
     <main>
-      <section class="hero">
-        <div class="hero-content">
-          <h1>Welcome to My Portfolio</h1>
-          <p>I'm Vishwa Chandra Chakma – a passionate technologist dedicated to innovation.</p>
-          <!-- Download Buttons Example -->
+      <section class="profile-section">
+        <div class="profile-img">
+          <img src="profilepic.jpg" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+          <h1>Vishwa Chandra Chakma</h1>
+          <p>
+            I'm a passionate technologist with a deep interest in innovation. 
+            I specialize in electronics and computer engineering such as  programming, web development 
+            and I love solving real-world problems with technology.
+          </p>
           <div class="download-buttons">
-            <a href="update resume.pdf" class="btn" download>Download Resume</a>
-            <a href="maintags.pdf" class="btn" download>Download Main Tags</a>
+            <a href="update resume.pdf" class="btn" download="">Download Resume</a>
+          
+          </div>
+          <br>
+
+          <div class="social-icons">
+            <a href="https://www.instagram.com/vishwa_chakma" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vishwa-chakma-6337aa268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/vishwa555121" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
           </div>
         </div>
+        
       </section>
+      
     </main>
 
     <!-- Footer -->
     <footer>
       <div class="social-links">
-        <a href="https://www.instagram.com/vishwa_chakma" target="_blank">
-          <i class="fab fa-instagram" style="font-size:30px; color:#FF0051;"></i>
+        <a href="https://www.instagram.com/vishwa_chakma" target="_blank" class="social-icon" style="color:red">
+          <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.linkedin.com/in/vishwa-chakma-6337aa268" target="_blank">
-          <i class="fab fa-linkedin" style="font-size:30px; color:#0077B5;"></i>
-        </a>
-        <a href="https://github.com/vishwa555121" target="_blank">
-          <i class="fab fa-github" style="font-size:30px; color:#333;"></i>
+        <a href="https://www.linkedin.com/in/vishwa-chakma-6337aa268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon" style="color:blue">
+          <i class="fab fa-linkedin"></i>
         </a>
       </div>
       <p>&copy; 2025 Vishwa Chandra Chakma. All rights reserved.</p>
     </footer>
   </div>
-  
-  <script>
-    // Toggle sidebar function for mobile navigation
-    function toggleSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      sidebar.classList.toggle('open');
-    }
-  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
