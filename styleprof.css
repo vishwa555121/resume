@@ -1,60 +1,81 @@
-/* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  /* Body Styles */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
-  }
-  
-  /* Header & Navigation */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Section */
+/* ... (your existing CSS) ... */
+
+/* Header Section */
+header {
+  background: #333;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  display: flex; /* Make header a flex container */
+  justify-content: center; /* Horizontally center content */
+  padding: 10px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  list-style: none;
+  display: flex; /* Make nav-menu a flex container */
+  justify-content: center; /* Horizontally center nav items */
+  width: 100%;
+}
+
+.nav-menu li {
+  margin: 0 10px; /* Add horizontal spacing between nav items */
+}
+
+.nav-menu li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: color 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-menu li a:hover {
+  color: #4CAF50;
+}
+
+/* ... (your existing CSS) ... *//* Main Section */
+main {
+  position: relative;
+  z-index: 999;
+  padding: 20px;
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 600px) {
   header {
-    background: #333;
-    color: #fff;
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    padding: 5px;
   }
-  
-  .nav-menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .nav-menu li {
-    margin: 0 15px;
-  }
-  
-  .nav-menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-menu li a:hover {
-    color: #4CAF50;
-  }
-  
-  /* Main Content */
-  main {
-    padding: 100px 20px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  /* Hero Section (index.html) */
+}
+
+/* Rest of your CSS remains the same */
+/* ... */
   .hero {
     background: #e0f7fa;
     padding: 60px 20px;
@@ -275,80 +296,29 @@
   }
   
   /* Media Queries */
- /* Media Query for Tablets and Smaller Screens */
-@media (max-width: 768px) {
-  /* Stack navigation menu vertically */
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
+  @media (max-width: 768px) {
+    .nav-menu {
+      flex-direction: column;
+    }
+    .nav-menu li {
+      margin: 10px 0;
+    }
+    .profile {
+      flex-direction: column;
+    }
+    .profile-pic {
+      margin-bottom: 20px;
+    }
   }
   
-  .nav-menu li {
-    margin: 10px 0;
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 28px;
+    }
+    .hero p {
+      font-size: 18px;
+    }
   }
-  
-  /* Reduce top padding in main to accommodate smaller screens */
-  main {
-    padding: 80px 15px 15px;
-  }
-  
-  /* Adjust hero section typography */
-  .hero h1 {
-    font-size: 28px;
-  }
-  
-  .hero p {
-    font-size: 16px;
-  }
-  
-  /* For sections with side-by-side layout (like profile-section), stack vertically */
-  .profile-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .profile-img {
-    margin: 0 auto 20px;
-    width: 150px;
-    height: 150px;
-  }
-}
-
-/* Media Query for Small Mobile Devices */
-@media (max-width: 480px) {
-  main {
-    padding: 70px 10px 10px;
-  }
-  
-  .hero h1 {
-    font-size: 24px;
-  }
-  
-  .hero p {
-    font-size: 14px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  
-  /* Adjust skills circles size if needed */
-  .circle-wrap {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .circle {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .percentage {
-    font-size: 1em;
-  }
-}
-
 /* Back to Home Button */
 .back-home {
     text-align: center;
@@ -388,65 +358,32 @@ html, body {
   }
   
   /* Header Styles */
-  /* Header & Fixed Navigation */
-header {
+  header {
     background: #333;
     color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;       /* Fixed height */
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;   /* Hide overflow from nav */
-  }
-  
-  /* Nav Menu - Force all items to share equal space */
-  .nav-menu {
-    list-style: none;
-    display: flex;
-    width: 100%;
-    margin: 0;
-    padding: 0 10px;
-  }
-  
-  .nav-menu li {
-    flex: 1 1 0;      /* Grow, shrink, and equal share */
-    min-width: 0;     /* Allow items to shrink */
+    padding: 15px 0;
     text-align: center;
   }
   
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-menu li {
+    margin: 0 15px;
+  }
+  
   .nav-menu li a {
-    display: block;
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    padding: 8px 0;
-    transition: color 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
-    white-space: nowrap;
+    transition: color 0.3s ease;
   }
   
   .nav-menu li a:hover {
     color: #4CAF50;
-  }
-  
-  /* Main Content */
-  main {
-    flex: 1;
-    padding: 70px 20px 20px; /* Top padding: header height (50px) + extra 20px */
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  /* Media Query for Small Screens */
-  @media (max-width: 480px) {
-    .nav-menu li a {
-      font-size: 12px;  /* Reduce font size */
-      padding: 4px 0;   /* Reduce padding */
-    }
   }
   
   /* Hero Section */
@@ -482,16 +419,16 @@ header {
     transform: scale(1.05);
   }
   
-  /* Footer Styles */
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
+  /* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
   .social-links {
     margin-bottom: 10px;
   }
